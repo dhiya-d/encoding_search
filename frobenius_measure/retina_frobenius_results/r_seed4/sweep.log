@@ -1,0 +1,28 @@
+[data] retinamnist merge=retina4 | 4 classes | chance=0.250 | linear probe on RAW TARGETS = 0.4557
+[sweep] 21 candidates, fit_steps=300, restarts=2, device=cpu
+
+   gates  cry    frob  overlap   probe   vs raw   verdict
+       1    0  0.6774   0.7605  0.3908  -0.0649   degraded
+       2    1  0.6585   0.7736  0.3771  -0.0787   degraded
+       3    2  0.6061   0.8059  0.3717  -0.0841   degraded
+       4    2  0.5660   0.8304  0.4046  -0.0512   degraded
+       5    0  0.5547   0.8374  0.4114  -0.0444   preserved
+       6    2  0.5320   0.8503  0.4214  -0.0344   preserved
+       7    2  0.5123   0.8613  0.4099  -0.0458   preserved
+       8    1  0.4876   0.8735  0.4027  -0.0531   degraded
+       9    4  0.4725   0.8819  0.4267  -0.0290   preserved
+      10    4  0.4476   0.8929  0.4304  -0.0253   preserved
+      11    3  0.4349   0.8997  0.4242  -0.0315   preserved
+      13    6  0.4199   0.9062  0.4194  -0.0364   preserved
+      14    5  0.4052   0.9126  0.4335  -0.0222   preserved
+      16    7  0.3954   0.9171  0.4392  -0.0165   preserved
+      17    6  0.3856   0.9210  0.4249  -0.0308   preserved
+      18    7  0.3712   0.9269  0.4113  -0.0444   preserved
+      19    5  0.3688   0.9282  0.4387  -0.0170   preserved
+      22    8  0.3651   0.9297  0.4142  -0.0416   preserved
+      23    7  0.3554   0.9334  0.4247  -0.0310   preserved
+      26    7  0.3492   0.9357  0.4375  -0.0183   preserved
+      29    9  0.3337   0.9417  0.4310  -0.0247   preserved
+
+saved -> experiments/r_seed4/cost_signal_curve.csv
+plot  -> experiments/r_seed4/cost_signal_curve.png

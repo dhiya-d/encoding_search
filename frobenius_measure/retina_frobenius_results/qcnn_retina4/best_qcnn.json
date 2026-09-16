@@ -1,0 +1,29 @@
+{
+  "n_qubits": 8,
+  "layers": [
+    {
+      "conv": "U_14",
+      "pattern": "linear",
+      "pool": 1,
+      "pool_type": "pool_U"
+    },
+    {
+      "conv": "U_9",
+      "pattern": "linear",
+      "pool": 0,
+      "pool_type": "pool_U"
+    },
+    {
+      "conv": "U_SO4",
+      "pattern": "linear",
+      "pool": 1,
+      "pool_type": "pool_U"
+    },
+    {
+      "conv": "U_TTN",
+      "pattern": "brick",
+      "pool": 0,
+      "pool_type": "pool_U"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+==================================================================
+ genome : layers=41 params=174 2q=54 (cry=14)
+ data   : retinamnist gray/16px merge=retina4 | 4 classes | chance=0.250
+------------------------------------------------------------------
+ RECONSTRUCTION (test split)
+   mean ||t-s||_F      : 0.2319   (0 = perfect, 2 = worst)
+   max  ||t-s||_F      : 0.3952
+   mean overlap <t,s>  : 0.9717
+------------------------------------------------------------------
+ CLASS SIGNAL (linear probe, balanced accuracy)
+   on raw targets      : 0.4557
+   on encoded states   : 0.4446   (-0.0112)
+   -> class signal preserved through the encoding.
+==================================================================

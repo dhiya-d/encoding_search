@@ -1,0 +1,11 @@
+{
+  "n_qubits": 8,
+  "layers": [
+    {
+      "conv": "U_9",
+      "pattern": "linear",
+      "pool": 1,
+      "pool_type": "pool_ansatz"
+    }
+  ]
+}

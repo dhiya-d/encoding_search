@@ -1,0 +1,19 @@
+[data] dermamnist merge=none | 7 classes | chance=0.143 | linear probe on RAW TARGETS = 0.3250
+[sweep] 12 candidates, fit_steps=300, restarts=2, device=cpu
+
+   gates  cry    frob  overlap   probe   vs raw   verdict
+       1    0  0.6929   0.7427  0.2378  -0.0872   degraded
+       2    1  0.6388   0.7793  0.2402  -0.0848   degraded
+       3    2  0.6253   0.7881  0.2701  -0.0549   degraded
+       4    1  0.6077   0.8004  0.2594  -0.0656   degraded
+       5    2  0.5630   0.8285  0.2895  -0.0355   preserved
+       6    2  0.5482   0.8371  0.2767  -0.0484   preserved
+       7    2  0.5425   0.8414  0.2676  -0.0575   degraded
+       8    4  0.5142   0.8568  0.2976  -0.0274   preserved
+       9    5  0.4846   0.8729  0.2813  -0.0437   preserved
+      11    3  0.4743   0.8784  0.2924  -0.0326   preserved
+      15    6  0.4689   0.8813  0.2638  -0.0612   degraded
+      18    9  0.4483   0.8903  0.2923  -0.0328   preserved
+
+saved -> experiments/der_seed2/cost_signal_curve.csv
+plot  -> experiments/der_seed2/cost_signal_curve.png
