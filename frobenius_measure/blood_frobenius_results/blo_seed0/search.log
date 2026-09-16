@@ -1,0 +1,48 @@
+[data] bloodmnist gray/16px merge=none -> 16x16 = 256 amplitudes, 8 qubits
+[data] 8 classes | chance=0.125
+[run ] mode=PARETO (NSGA-II) | device=cpu | pop=24 gen=12 | fit_steps=150 | batch=256
+gen  0 | best_frob=0.8357 | front=6 | gates 1-17 | 222.2s
+gen  1 | best_frob=0.8357 | front=8 | gates 1-17 | 350.4s
+gen  2 | best_frob=0.8277 | front=8 | gates 1-10 | 501.8s
+gen  3 | best_frob=0.6983 | front=9 | gates 1-24 | 637.1s
+gen  4 | best_frob=0.6983 | front=12 | gates 1-24 | 812.9s
+gen  5 | best_frob=0.6457 | front=14 | gates 1-25 | 1015.3s
+gen  6 | best_frob=0.6457 | front=17 | gates 1-25 | 1208.7s
+gen  7 | best_frob=0.5694 | front=20 | gates 1-29 | 1507.0s
+gen  8 | best_frob=0.5198 | front=21 | gates 1-36 | 1823.8s
+gen  9 | best_frob=0.4826 | front=24 | gates 1-39 | 2219.3s
+gen 10 | best_frob=0.4515 | front=24 | gates 1-45 | 2698.8s
+gen 11 | best_frob=0.4515 | front=24 | gates 1-45 | 3129.5s
+
+[re-benchmarking 24 finalists on 512 images]
+
+                 PARETO FRONT (re-benchmarked)                  
+     frob  overlap  gates  cry  params   architecture
+   0.9723   0.5219      1    0      32   layers=5 params=32 2q=1 (cry=0)
+   0.9402   0.5534      3    1      33   layers=6 params=33 2q=3 (cry=1)
+   0.9258   0.5654      4    1      33   layers=5 params=33 2q=4 (cry=1)
+   0.8959   0.5926      5    1      57   layers=9 params=57 2q=5 (cry=1)
+   0.8809   0.6067      7    3      35   layers=6 params=35 2q=7 (cry=3)
+   0.8273   0.6504      8    2      50   layers=9 params=50 2q=8 (cry=2)
+   0.8104   0.6673      9    2      74   layers=13 params=74 2q=9 (cry=2)
+   0.7855   0.6853     10    3      51   layers=11 params=51 2q=10 (cry=3)
+   0.7633   0.7038     11    2      42   layers=9 params=42 2q=11 (cry=2)
+   0.7583   0.7064     13    4      60   layers=11 params=60 2q=13 (cry=4)
+   0.7077   0.7440     15    4      76   layers=16 params=76 2q=15 (cry=4)
+   0.6981   0.7519     16    5      61   layers=14 params=61 2q=16 (cry=5)
+   0.6854   0.7601     18    5      93   layers=19 params=93 2q=18 (cry=5)
+   0.6562   0.7795     19    5     101   layers=19 params=101 2q=19 (cry=5)
+   0.6283   0.7982     21    5     109   layers=21 params=109 2q=21 (cry=5)
+   0.6098   0.8100     24    6     110   layers=22 params=110 2q=24 (cry=6)
+   0.5973   0.8179     27    7     103   layers=23 params=103 2q=27 (cry=7)
+   0.5647   0.8367     28    7     127   layers=26 params=127 2q=28 (cry=7)
+   0.5438   0.8488     30   14     102   layers=21 params=102 2q=30 (cry=14)
+   0.5293   0.8565     31    9     145   layers=30 params=145 2q=31 (cry=9)
+   0.4935   0.8751     35   10     146   layers=31 params=146 2q=35 (cry=10)
+   0.4739   0.8845     37   10     170   layers=35 params=170 2q=37 (cry=10)
+   0.4731   0.8855     43   17     145   layers=30 params=145 2q=43 (cry=17)
+   0.4447   0.8990     45   18     146   layers=31 params=146 2q=45 (cry=18)  <-- selected
+saved -> experiments/blo_seed0/best_circuit.png
+        8 qubits   |   45 two-qubit gates (CNOT 15, CZ 12, CRY 18)   |   146 parameters   |   depth 31
+
+selected: frob=0.4447 gates=45 -> experiments/blo_seed0/best_genome.json

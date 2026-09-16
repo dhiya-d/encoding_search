@@ -1,0 +1,31 @@
+[data] bloodmnist merge=none | 8 classes | chance=0.125 | linear probe on RAW TARGETS = 0.6160
+[sweep] 24 candidates, fit_steps=300, restarts=2, device=cpu
+
+   gates  cry    frob  overlap   probe   vs raw   verdict
+       1    0  0.9345   0.5572  0.4783  -0.1377   LOST
+       2    1  0.9062   0.5832  0.4682  -0.1479   LOST
+       3    2  0.8992   0.5900  0.4751  -0.1409   LOST
+       4    0  0.8178   0.6560  0.5347  -0.0813   degraded
+       5    2  0.7817   0.6855  0.5565  -0.0596   degraded
+       7    3  0.7730   0.6927  0.5615  -0.0545   degraded
+       8    3  0.7501   0.7106  0.5735  -0.0426   preserved
+       9    2  0.7189   0.7333  0.5656  -0.0504   degraded
+      12    3  0.6842   0.7592  0.5870  -0.0290   preserved
+      13    6  0.6624   0.7734  0.5796  -0.0364   preserved
+      14   11  0.6480   0.7839  0.5883  -0.0277   preserved
+      15   11  0.6254   0.7982  0.5907  -0.0253   preserved
+      19   15  0.6071   0.8109  0.5902  -0.0259   preserved
+      20   10  0.5670   0.8340  0.6003  -0.0157   preserved
+      22   15  0.5360   0.8521  0.5941  -0.0219   preserved
+      26   19  0.5025   0.8700  0.6180  +0.0019   preserved
+      27   17  0.4902   0.8758  0.6097  -0.0064   preserved
+      29   20  0.4780   0.8822  0.6043  -0.0118   preserved
+      33   23  0.4685   0.8868  0.6013  -0.0148   preserved
+      34   21  0.4344   0.9026  0.6234  +0.0073   preserved
+      40   25  0.4017   0.9168  0.6101  -0.0060   preserved
+      42   27  0.3919   0.9209  0.6189  +0.0028   preserved
+      45   28  0.3825   0.9247  0.6044  -0.0117   preserved
+      46   30  0.3725   0.9284  0.6029  -0.0131   preserved
+
+saved -> experiments/blo_seed3/cost_signal_curve.csv
+plot  -> experiments/blo_seed3/cost_signal_curve.png

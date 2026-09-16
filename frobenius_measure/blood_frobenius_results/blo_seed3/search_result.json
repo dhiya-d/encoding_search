@@ -1,0 +1,5037 @@
+{
+  "data": {
+    "data_dir": "bloodmnist",
+    "channel": "gray",
+    "size": 16,
+    "center": true,
+    "merge": "none"
+  },
+  "search": {
+    "pareto_front": true,
+    "gate_penalty": 0.004,
+    "knee_tolerance": 0.015,
+    "pop": 24,
+    "gen": 12,
+    "p_crossover": 0.7,
+    "min_gates": 1,
+    "max_layers": 10,
+    "elite": 2,
+    "fit_steps": 150,
+    "fit_lr": 0.08,
+    "batch_train": 256,
+    "batch_final": 512,
+    "restarts": 1,
+    "seed": 3,
+    "device": "auto",
+    "outdir": "experiments/blo_seed3"
+  },
+  "n_qubits": 8,
+  "log": [
+    {
+      "gen": 0,
+      "best_frob": 0.887715756893158,
+      "front": 3,
+      "min_gates": 1,
+      "max_gates": 4,
+      "elapsed_s": 214.9
+    },
+    {
+      "gen": 1,
+      "best_frob": 0.8401363492012024,
+      "front": 6,
+      "min_gates": 1,
+      "max_gates": 9,
+      "elapsed_s": 349.7
+    },
+    {
+      "gen": 2,
+      "best_frob": 0.7307568788528442,
+      "front": 7,
+      "min_gates": 1,
+      "max_gates": 12,
+      "elapsed_s": 520.5
+    },
+    {
+      "gen": 3,
+      "best_frob": 0.7307568788528442,
+      "front": 8,
+      "min_gates": 1,
+      "max_gates": 12,
+      "elapsed_s": 726.4
+    },
+    {
+      "gen": 4,
+      "best_frob": 0.7035620808601379,
+      "front": 8,
+      "min_gates": 1,
+      "max_gates": 12,
+      "elapsed_s": 931.9
+    },
+    {
+      "gen": 5,
+      "best_frob": 0.6743286848068237,
+      "front": 11,
+      "min_gates": 1,
+      "max_gates": 14,
+      "elapsed_s": 1168.3
+    },
+    {
+      "gen": 6,
+      "best_frob": 0.623903751373291,
+      "front": 12,
+      "min_gates": 1,
+      "max_gates": 19,
+      "elapsed_s": 1363.7
+    },
+    {
+      "gen": 7,
+      "best_frob": 0.5873242616653442,
+      "front": 15,
+      "min_gates": 1,
+      "max_gates": 22,
+      "elapsed_s": 1625.3
+    },
+    {
+      "gen": 8,
+      "best_frob": 0.4899004101753235,
+      "front": 21,
+      "min_gates": 1,
+      "max_gates": 33,
+      "elapsed_s": 1995.1
+    },
+    {
+      "gen": 9,
+      "best_frob": 0.4567326307296753,
+      "front": 21,
+      "min_gates": 1,
+      "max_gates": 34,
+      "elapsed_s": 2324.8
+    },
+    {
+      "gen": 10,
+      "best_frob": 0.42737969756126404,
+      "front": 23,
+      "min_gates": 1,
+      "max_gates": 40,
+      "elapsed_s": 2733.8
+    },
+    {
+      "gen": 11,
+      "best_frob": 0.4008137881755829,
+      "front": 24,
+      "min_gates": 1,
+      "max_gates": 46,
+      "elapsed_s": 3112.7
+    }
+  ],
+  "candidates": [
+    {
+      "frob": 0.9378904700279236,
+      "gates": 1,
+      "score": 0.9418904700279236,
+      "info": {
+        "mean_frobenius": 0.9378904700279236,
+        "max_frobenius": 1.174756646156311,
+        "mean_overlap": 0.5537694692611694,
+        "gates": 1,
+        "params": 24,
+        "cry": 0,
+        "depth": 4,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.9041047692298889,
+      "gates": 2,
+      "score": 0.9121047692298889,
+      "info": {
+        "mean_frobenius": 0.9041047692298889,
+        "max_frobenius": 1.2510188817977905,
+        "mean_overlap": 0.5847498178482056,
+        "gates": 2,
+        "params": 41,
+        "cry": 1,
+        "depth": 6,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.8961724042892456,
+      "gates": 3,
+      "score": 0.9081724042892456,
+      "info": {
+        "mean_frobenius": 0.8961724042892456,
+        "max_frobenius": 1.1361989974975586,
+        "mean_overlap": 0.592488169670105,
+        "gates": 3,
+        "params": 42,
+        "cry": 2,
+        "depth": 7,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.8129505515098572,
+      "gates": 4,
+      "score": 0.8289505515098572,
+      "info": {
+        "mean_frobenius": 0.8129505515098572,
+        "max_frobenius": 1.1098496913909912,
+        "mean_overlap": 0.6593725681304932,
+        "gates": 4,
+        "params": 24,
+        "cry": 0,
+        "depth": 5,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.7764172554016113,
+      "gates": 5,
+      "score": 0.7964172554016113,
+      "info": {
+        "mean_frobenius": 0.7764172554016113,
+        "max_frobenius": 1.1474658250808716,
+        "mean_overlap": 0.6891515851020813,
+        "gates": 5,
+        "params": 58,
+        "cry": 2,
+        "depth": 9,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.7675845623016357,
+      "gates": 7,
+      "score": 0.7955845623016358,
+      "info": {
+        "mean_frobenius": 0.7675845623016357,
+        "max_frobenius": 1.0585711002349854,
+        "mean_overlap": 0.6968356370925903,
+        "gates": 7,
+        "params": 59,
+        "cry": 3,
+        "depth": 10,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ],
+              [
+                6,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.7484407424926758,
+      "gates": 8,
+      "score": 0.7804407424926758,
+      "info": {
+        "mean_frobenius": 0.7484407424926758,
+        "max_frobenius": 1.0355899333953857,
+        "mean_overlap": 0.7118130326271057,
+        "gates": 8,
+        "params": 59,
+        "cry": 3,
+        "depth": 10,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ],
+              [
+                4,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ],
+              [
+                6,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.7248295545578003,
+      "gates": 9,
+      "score": 0.7608295545578003,
+      "info": {
+        "mean_frobenius": 0.7248295545578003,
+        "max_frobenius": 1.1734704971313477,
+        "mean_overlap": 0.7287179827690125,
+        "gates": 9,
+        "params": 42,
+        "cry": 2,
+        "depth": 9,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ],
+              [
+                2,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.6949851512908936,
+      "gates": 12,
+      "score": 0.7429851512908936,
+      "info": {
+        "mean_frobenius": 0.6949851512908936,
+        "max_frobenius": 0.9305235743522644,
+        "mean_overlap": 0.7519491910934448,
+        "gates": 12,
+        "params": 43,
+        "cry": 3,
+        "depth": 10,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                2,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                3,
+                "cnot"
+              ],
+              [
+                4,
+                2,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ],
+              [
+                2,
+                5,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ],
+              [
+                2,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.6729727983474731,
+      "gates": 13,
+      "score": 0.7249727983474732,
+      "info": {
+        "mean_frobenius": 0.6729727983474731,
+        "max_frobenius": 0.9033374190330505,
+        "mean_overlap": 0.766055703163147,
+        "gates": 13,
+        "params": 30,
+        "cry": 6,
+        "depth": 8,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ],
+              [
+                2,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.6600543856620789,
+      "gates": 14,
+      "score": 0.7160543856620789,
+      "info": {
+        "mean_frobenius": 0.6600543856620789,
+        "max_frobenius": 0.907065212726593,
+        "mean_overlap": 0.7758214473724365,
+        "gates": 14,
+        "params": 83,
+        "cry": 11,
+        "depth": 16,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.6423935890197754,
+      "gates": 15,
+      "score": 0.7023935890197754,
+      "info": {
+        "mean_frobenius": 0.6423935890197754,
+        "max_frobenius": 0.8649093508720398,
+        "mean_overlap": 0.7870359420776367,
+        "gates": 15,
+        "params": 67,
+        "cry": 11,
+        "depth": 15,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                1,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.6284829378128052,
+      "gates": 19,
+      "score": 0.7044829378128051,
+      "info": {
+        "mean_frobenius": 0.6284829378128052,
+        "max_frobenius": 0.847996175289154,
+        "mean_overlap": 0.7974727153778076,
+        "gates": 19,
+        "params": 79,
+        "cry": 15,
+        "depth": 16,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                3,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ],
+              [
+                7,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.5875760912895203,
+      "gates": 20,
+      "score": 0.6675760912895202,
+      "info": {
+        "mean_frobenius": 0.5875760912895203,
+        "max_frobenius": 0.7810917496681213,
+        "mean_overlap": 0.8223035931587219,
+        "gates": 20,
+        "params": 98,
+        "cry": 10,
+        "depth": 19,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                3,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ],
+              [
+                4,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ],
+              [
+                6,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.5620365738868713,
+      "gates": 22,
+      "score": 0.6500365738868713,
+      "info": {
+        "mean_frobenius": 0.5620365738868713,
+        "max_frobenius": 0.7631142139434814,
+        "mean_overlap": 0.837696373462677,
+        "gates": 22,
+        "params": 71,
+        "cry": 15,
+        "depth": 17,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ],
+              [
+                2,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.531249463558197,
+      "gates": 26,
+      "score": 0.635249463558197,
+      "info": {
+        "mean_frobenius": 0.531249463558197,
+        "max_frobenius": 0.7252668738365173,
+        "mean_overlap": 0.8550204634666443,
+        "gates": 26,
+        "params": 83,
+        "cry": 19,
+        "depth": 18,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.5154853463172913,
+      "gates": 27,
+      "score": 0.6234853463172912,
+      "info": {
+        "mean_frobenius": 0.5154853463172913,
+        "max_frobenius": 0.6958562731742859,
+        "mean_overlap": 0.8631182909011841,
+        "gates": 27,
+        "params": 105,
+        "cry": 17,
+        "depth": 24,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cz"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                1,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.5051987171173096,
+      "gates": 29,
+      "score": 0.6211987171173096,
+      "info": {
+        "mean_frobenius": 0.5051987171173096,
+        "max_frobenius": 0.7111074924468994,
+        "mean_overlap": 0.8685000538825989,
+        "gates": 29,
+        "params": 116,
+        "cry": 20,
+        "depth": 27,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                1,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                1,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.49651244282722473,
+      "gates": 33,
+      "score": 0.6285124428272247,
+      "info": {
+        "mean_frobenius": 0.49651244282722473,
+        "max_frobenius": 0.6813169121742249,
+        "mean_overlap": 0.8731355667114258,
+        "gates": 33,
+        "params": 135,
+        "cry": 23,
+        "depth": 27,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cry"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.4623314440250397,
+      "gates": 34,
+      "score": 0.5983314440250397,
+      "info": {
+        "mean_frobenius": 0.4623314440250397,
+        "max_frobenius": 0.6338856816291809,
+        "mean_overlap": 0.8901150226593018,
+        "gates": 34,
+        "params": 117,
+        "cry": 21,
+        "depth": 26,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                3,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ],
+              [
+                4,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ],
+              [
+                6,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.43264833092689514,
+      "gates": 40,
+      "score": 0.5926483309268952,
+      "info": {
+        "mean_frobenius": 0.43264833092689514,
+        "max_frobenius": 0.5746653079986572,
+        "mean_overlap": 0.9037514328956604,
+        "gates": 40,
+        "params": 145,
+        "cry": 25,
+        "depth": 33,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                1,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                3,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ],
+              [
+                4,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ],
+              [
+                6,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.4228513836860657,
+      "gates": 42,
+      "score": 0.5908513836860657,
+      "info": {
+        "mean_frobenius": 0.4228513836860657,
+        "max_frobenius": 0.6136345267295837,
+        "mean_overlap": 0.908017635345459,
+        "gates": 42,
+        "params": 139,
+        "cry": 27,
+        "depth": 30,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                3,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cry"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.41615748405456543,
+      "gates": 45,
+      "score": 0.5961574840545654,
+      "info": {
+        "mean_frobenius": 0.41615748405456543,
+        "max_frobenius": 0.5662793517112732,
+        "mean_overlap": 0.9110686182975769,
+        "gates": 45,
+        "params": 164,
+        "cry": 28,
+        "depth": 37,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                1,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                3,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ],
+              [
+                4,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    },
+    {
+      "frob": 0.4049783945083618,
+      "gates": 46,
+      "score": 0.5889783945083618,
+      "info": {
+        "mean_frobenius": 0.4049783945083618,
+        "max_frobenius": 0.5541238188743591,
+        "mean_overlap": 0.9157163500785828,
+        "gates": 46,
+        "params": 142,
+        "cry": 30,
+        "depth": 33,
+        "final": true
+      },
+      "genome": {
+        "n_qubits": 8,
+        "layers": [
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                5,
+                "cnot"
+              ],
+              [
+                3,
+                1,
+                "cry"
+              ],
+              [
+                1,
+                2,
+                "cnot"
+              ],
+              [
+                2,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                6,
+                5,
+                "cry"
+              ],
+              [
+                2,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                7,
+                "cry"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                4,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                5,
+                "cry"
+              ],
+              [
+                1,
+                7,
+                "cry"
+              ],
+              [
+                5,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                3,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                5,
+                7,
+                "cry"
+              ],
+              [
+                1,
+                0,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                2,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                4,
+                "cnot"
+              ],
+              [
+                7,
+                1,
+                "cry"
+              ],
+              [
+                6,
+                1,
+                "cry"
+              ],
+              [
+                0,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cry"
+              ],
+              [
+                1,
+                6,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                0,
+                4,
+                "cnot"
+              ],
+              [
+                0,
+                1,
+                "cry"
+              ],
+              [
+                4,
+                5,
+                "cnot"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "rot"
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                4,
+                5,
+                "cry"
+              ],
+              [
+                4,
+                0,
+                "cz"
+              ],
+              [
+                5,
+                6,
+                "cz"
+              ]
+            ]
+          },
+          {
+            "type": "ent",
+            "pairs": [
+              [
+                1,
+                0,
+                "cnot"
+              ],
+              [
+                6,
+                0,
+                "cry"
+              ]
+            ]
+          },
+          {
+            "type": "rot"
+          }
+        ]
+      }
+    }
+  ],
+  "winner": {
+    "frob": 0.41615748405456543,
+    "gates": 45,
+    "score": 0.5961574840545654,
+    "genome": {
+      "n_qubits": 8,
+      "layers": [
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              0,
+              4,
+              "cnot"
+            ],
+            [
+              4,
+              7,
+              "cry"
+            ],
+            [
+              0,
+              1,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              2,
+              4,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              0,
+              5,
+              "cnot"
+            ],
+            [
+              3,
+              1,
+              "cry"
+            ],
+            [
+              1,
+              2,
+              "cnot"
+            ],
+            [
+              2,
+              6,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              6,
+              5,
+              "cry"
+            ],
+            [
+              2,
+              0,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              4,
+              7,
+              "cry"
+            ],
+            [
+              0,
+              1,
+              "cz"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              2,
+              4,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              2,
+              1,
+              "cnot"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              6,
+              5,
+              "cry"
+            ],
+            [
+              2,
+              0,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              4,
+              7,
+              "cry"
+            ],
+            [
+              0,
+              1,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              2,
+              4,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              1,
+              5,
+              "cry"
+            ],
+            [
+              1,
+              7,
+              "cry"
+            ],
+            [
+              0,
+              6,
+              "cz"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              0,
+              3,
+              "cnot"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              5,
+              7,
+              "cry"
+            ],
+            [
+              1,
+              0,
+              "cz"
+            ]
+          ]
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              2,
+              0,
+              "cz"
+            ],
+            [
+              5,
+              4,
+              "cnot"
+            ],
+            [
+              7,
+              1,
+              "cry"
+            ],
+            [
+              6,
+              1,
+              "cry"
+            ],
+            [
+              0,
+              6,
+              "cz"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              1,
+              0,
+              "cry"
+            ],
+            [
+              1,
+              6,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              0,
+              4,
+              "cnot"
+            ],
+            [
+              0,
+              1,
+              "cry"
+            ],
+            [
+              4,
+              5,
+              "cnot"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              5,
+              4,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              5,
+              7,
+              "cry"
+            ],
+            [
+              1,
+              0,
+              "cz"
+            ]
+          ]
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              2,
+              0,
+              "cz"
+            ],
+            [
+              5,
+              4,
+              "cnot"
+            ],
+            [
+              7,
+              1,
+              "cry"
+            ],
+            [
+              6,
+              1,
+              "cry"
+            ],
+            [
+              0,
+              6,
+              "cz"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        },
+        {
+          "type": "ent",
+          "pairs": [
+            [
+              1,
+              0,
+              "cry"
+            ],
+            [
+              1,
+              6,
+              "cry"
+            ]
+          ]
+        },
+        {
+          "type": "rot"
+        }
+      ]
+    }
+  }
+}

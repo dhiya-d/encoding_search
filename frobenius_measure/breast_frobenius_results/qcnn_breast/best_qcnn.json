@@ -1,0 +1,35 @@
+{
+  "n_qubits": 8,
+  "layers": [
+    {
+      "conv": "U_15",
+      "pattern": "linear",
+      "pool": 0,
+      "pool_type": "pool_ansatz"
+    },
+    {
+      "conv": "U_15",
+      "pattern": "linear",
+      "pool": 1,
+      "pool_type": "pool_ansatz"
+    },
+    {
+      "conv": "U_13",
+      "pattern": "linear",
+      "pool": 1,
+      "pool_type": "pool_ansatz"
+    },
+    {
+      "conv": "U_13",
+      "pattern": "ring",
+      "pool": 1,
+      "pool_type": "pool_U"
+    },
+    {
+      "conv": "U_gate",
+      "pattern": "linear",
+      "pool": 0,
+      "pool_type": "pool_U"
+    }
+  ]
+}

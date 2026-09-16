@@ -1,0 +1,25 @@
+[data] breastmnist merge=none | 2 classes | chance=0.500 | linear probe on RAW TARGETS = 0.7018
+[sweep] 18 candidates, fit_steps=300, restarts=2, device=cpu
+
+   gates  cry    frob  overlap   probe   vs raw   verdict
+       1    1  0.7074   0.7403  0.6375  -0.0643   degraded
+       2    1  0.6729   0.7638  0.6321  -0.0696   degraded
+       3    1  0.6566   0.7748  0.6839  -0.0179   preserved
+       4    1  0.6168   0.8017  0.6643  -0.0375   preserved
+       5    1  0.5849   0.8216  0.6929  -0.0089   preserved
+       6    1  0.5851   0.8223  0.7089  +0.0071   preserved
+       7    2  0.5704   0.8312  0.7089  +0.0071   preserved
+       8    2  0.5455   0.8440  0.7000  -0.0018   preserved
+       9    1  0.5338   0.8517  0.6750  -0.0268   preserved
+      10    2  0.5075   0.8659  0.6929  -0.0089   preserved
+      11    2  0.4942   0.8729  0.6929  -0.0089   preserved
+      12    3  0.4676   0.8858  0.7089  +0.0071   preserved
+      14    3  0.4565   0.8912  0.7018  +0.0000   preserved
+      16    3  0.4288   0.9042  0.7268  +0.0250   preserved
+      19    4  0.4015   0.9159  0.6839  -0.0179   preserved
+      23    5  0.3671   0.9298  0.6929  -0.0089   preserved
+      24    5  0.3594   0.9328  0.7018  +0.0000   preserved
+      33    7  0.3532   0.9354  0.7018  +0.0000   preserved
+
+saved -> experiments/b_seed2/cost_signal_curve.csv
+plot  -> experiments/b_seed2/cost_signal_curve.png

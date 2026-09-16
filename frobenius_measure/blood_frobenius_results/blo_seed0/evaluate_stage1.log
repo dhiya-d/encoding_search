@@ -1,0 +1,14 @@
+==================================================================
+ genome : layers=31 params=146 2q=45 (cry=18)
+ data   : bloodmnist gray/16px merge=none | 8 classes | chance=0.125
+------------------------------------------------------------------
+ RECONSTRUCTION (test split)
+   mean ||t-s||_F      : 0.3927   (0 = perfect, 2 = worst)
+   max  ||t-s||_F      : 0.5648
+   mean overlap <t,s>  : 0.9208
+------------------------------------------------------------------
+ CLASS SIGNAL (linear probe, balanced accuracy)
+   on raw targets      : 0.6160
+   on encoded states   : 0.6094   (-0.0066)
+   -> class signal preserved through the encoding.
+==================================================================
