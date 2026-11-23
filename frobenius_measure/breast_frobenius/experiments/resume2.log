@@ -1,0 +1,55 @@
+=== Stage 2b: QCNN architecture search (target-qubits=1 -> 2 outcomes) ===
+[data] encoded/breast_seed0
+       encoder: layers=54 params=240 2q=73 (cry=32)
+       merge=none | 2 classes | chance=0.500 | train 586 / val 118 / test 76
+       mean |chi| train=0.1677
+[run ] mode=SINGLE (bal_acc - 0.0005*gates - 0.001*params) | device=cuda | pop=12 gen=10 | layers 1-6 | epochs=60
+       readout 1 qubit(s) = 2 outcomes | forced reduction
+gen  0 | best_acc=0.6810 (fit=0.6160, 2L, 22 2q, 54p) | 750.4s
+gen  1 | best_acc=0.6810 (fit=0.6160, 2L, 22 2q, 54p) | 1158.4s
+gen  2 | best_acc=0.6810 (fit=0.6160, 2L, 22 2q, 54p) | 1588.2s
+gen  3 | best_acc=0.6810 (fit=0.6160, 2L, 22 2q, 54p) | 2727.5s
+gen  4 | best_acc=0.6810 (fit=0.6160, 2L, 22 2q, 54p) | 3834.2s
+gen  5 | best_acc=0.6810 (fit=0.6160, 2L, 22 2q, 54p) | 4919.2s
+gen  6 | best_acc=0.7435 (fit=0.6385, 4L, 30 2q, 90p) | 5480.4s
+gen  7 | best_acc=0.7435 (fit=0.6385, 4L, 30 2q, 90p) | 5814.0s
+gen  8 | best_acc=0.7435 (fit=0.6385, 4L, 30 2q, 90p) | 6196.0s
+gen  9 | best_acc=0.7435 (fit=0.6385, 4L, 30 2q, 90p) | 6419.3s
+
+[re-benchmarking 6 finalists at 100 epochs]
+
+                 FINALISTS (re-benchmarked, validation)                 
+  chance = 0.500
+   bal_acc  fitness    2q  params  architecture
+    0.7198   0.6548    22      54  2L [8→1→1] U_6+U_SO4 | 54 params | 22 2q  <-- selected
+    0.7198   0.6548    22      54  2L [8→1→1] U_6+U_SO4 | 54 params | 22 2q
+    0.7198   0.6548    22      54  2L [8→1→1] U_6+U_gate | 54 params | 22 2q
+    0.6868   0.6148    24      60  3L [8→2→1→1] U_6+U_SO4+U_gate | 60 params | 24 2q
+    0.6984   0.5934    30      90  4L [8→4→2→1→1] U_6+U_SU4+U_13+U_gate | 90 params | 30 2q
+    0.6984   0.5934    30      90  3L [8→4→2→1] U_6+U_SU4+U_13 | 90 params | 30 2q
+saved -> experiments/qcnn_breast/best_qcnn_circuit.png
+        2L [8→1→1] U_6+U_SO4 | 54 params | 22 2q
+
+selected: val bal_acc=0.7198 -> experiments/qcnn_breast/best_qcnn.json
+run qcnn_evaluate.py for the held-out test number.
+=== Stage 2c: held-out test evaluation ===
+  seed 0: test bal_acc = 0.6571
+  seed 1: test bal_acc = 0.6607
+  seed 2: test bal_acc = 0.6607
+  seed 3: test bal_acc = 0.6321
+  seed 4: test bal_acc = 0.6625
+
+====================================================================
+ genome  : 2L [8→1→1] U_6+U_SO4 | 54 params | 22 2q
+ encoder : layers=54 params=240 2q=73 (cry=32)
+ data    : none | 2 classes | chance = 0.500
+--------------------------------------------------------------------
+  QCNN TEST balanced accuracy : 0.6546 +/- 0.0114 (n=5)
+  per-class recall (seed 0)   : [0.6, 0.714]
+  linear probe on same states : 0.6839
+  linear probe on raw targets : 0.7018
+--------------------------------------------------------------------
+  vs chance                   : +0.1546
+  vs linear-on-encoded-states : -0.0293   below
+  vs linear-on-raw-targets    : -0.0472   below
+====================================================================
