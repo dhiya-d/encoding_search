@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# CHPC Lengau submission script for retina_frobenius/run_pipeline.sh.
+# Submit from INSIDE this directory on Lustre:
+#   cd /mnt/lustre/users/<you>/.../retina_frobenius
+#   qsub submit_chpc.pbs
+#
+# The 5 Stage-1 seeds run concurrently inside run_pipeline.sh, each capped to
+# ncpus/5 BLAS/OpenMP threads -- see the comment block at the top of
+# run_pipeline.sh for why (nproc can lie about the real per-job allocation on
+# a shared "smp" node, so it prefers PBS's own NCPUS/PBS_NCPUS instead).
+
+#PBS -N retina_frobenius
+#PBS -l select=1:ncpus=24:mpiprocs=24:mem=64gb
+#PBS -P PHYS1773
+#PBS -q smp
+#PBS -l walltime=48:00:00
+#PBS -o job.out
+#PBS -e job.err
+#PBS -m abe
+#PBS -M 29857708@sun.ac.za
+ulimit -s unlimited
+
+module load chpc/compmech/gcc/12.1.0
+module load chpc/compmech/python/3.11.6-gcc-12.1.0
+module load chpc/compmech/openblas/0.3.26-gcc-12.1.0
+
+export XLA_PYTHON_CLIENT_PREALLOCATE=false
+export LIB_PATH=$(gcc --print-file-name=libstdc++.so.6)
+export LD_PRELOAD=$LIB_PATH
+
+# EDIT: point this at wherever the venv with `pip install -r requirements.txt`
+# (torch, numpy, scikit-learn, matplotlib, pillow) for these Frobenius
+# projects lives -- can be shared across breast/blood/derma/retina_frobenius.
+source /mnt/lustre/users/ddharampal/project/.venv/bin/activate
+
+cd "$PBS_O_WORKDIR"
+./run_pipeline.sh
