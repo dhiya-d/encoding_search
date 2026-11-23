@@ -1,0 +1,16 @@
+# Core (needed for every result in the paper). Versions used for the paper runs
+# are given as lower bounds; newer versions should work.
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+hierarqcal>=0.5          # circuit connectivity (Qcycle motifs) of the genomes
+threadpoolctl>=3.2       # one BLAS thread per worker process (optional but recommended)
+
+# Downloading the datasets (tools/prepare_dataset.py)
+medmnist>=3.0
+
+# Optional: verification tests and export of encodings to PennyLane / Qiskit
+# pennylane>=0.36
+# qiskit>=1.0
+# pytest>=8
