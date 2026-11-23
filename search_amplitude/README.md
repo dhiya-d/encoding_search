@@ -1,4 +1,4 @@
-# search_amplitude/ — Search 1: amplitude-encoder search
+# search_amplitude/ — Searches 2 and 3: amplitude-encoder search (fidelity or retention)
 
 Approximate amplitude encoding: every 16×16 grayscale image (256 values, normalised)
 is prepared by its own fitted RY/CNOT circuit. The *structure* of that circuit is searched

@@ -374,7 +374,7 @@ def paired(a, x, y, clf):
 
 def stage_report(a, P, arms):
     """Markdown/JSON report and figures: fidelity vs. kernel AUC across arms, retention vs.
-    fidelity picks, literature and random baselines (Table II, Fig. 3).
+    fidelity picks, literature and random baselines (Table IV, Fig. 4).
     """
     E = collect(a, P, arms)
     if not E:

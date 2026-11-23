@@ -2,16 +2,16 @@
 
 Code for the paper *"Fidelity, spectra, and classical simulability: what matters in data
 encodings for quantum image classification"*. It searches for 8-qubit data-encoding circuits
-for MedMNIST images in two families and evaluates them with quantum kernels and trained
-quantum classifiers, with paired bootstrap statistics:
+for MedMNIST images with four evolutionary (NSGA-II) searches, each trading a quality
+measure against the number of two-qubit gates, and evaluates them with linear probes,
+quantum kernels and trained quantum classifiers, with paired bootstrap statistics:
 
-* **Amplitude encodings** (`search_amplitude/`): approximate amplitude encoding of 16×16
-  grayscale images, one circuit fitted per image. NSGA-II searches the circuit structure,
-  scored by the *retention* of class signal (kernel AUC of the encoded states relative to the
-  exact states) against the number of CNOTs.
-* **Fourier (angle) encodings** (`search_fourier/`): low-frequency colour DCT features
-  encoded as rotation angles; the circuit structure fixes the accessible frequency spectrum.
-  NSGA-II searches structures by kernel AUC against two-qubit cost.
+| Search | Encoding | Quality objective | Code |
+|---|---|---|---|
+| 1. Frobenius | approximate amplitude encoding, circuit fitted per image | mean Frobenius distance to the target state | `frobenius_measure/` (PyTorch) |
+| 2. Fidelity | approximate amplitude encoding | mean fidelity | `search_amplitude/` with `--objective fidelity` |
+| 3. Retention | approximate amplitude encoding | retained class signal (CV kernel AUC, encoded / exact states) | `search_amplitude/` (default) |
+| 4. Fourier | angle encoding of colour DCT features | CV kernel AUC | `search_fourier/` |
 
 Everything is simulated exactly in NumPy (state vectors, adjoint gradients, depolarizing
 noise by trajectories, finite-shot estimators).
@@ -34,7 +34,7 @@ diagnostics/             amplitude-encoding diagnostics (paper Sec. V A)
   diag_a_phase_check.py    (a) global-sign artefact; also encodes the test split with a circuit
   diag_b_ceiling.py        (b) exact-state ceilings vs. classical references
   diag_c_spectral.py       (c) where the class signal sits; class-signal budget vs. fidelity
-search_amplitude/        SEARCH 1: amplitude-encoder search
+search_amplitude/        SEARCHES 2 and 3: amplitude-encoder search (fidelity or retention)
   search_config.py         its settings
   search_core.py           fitness (retention), genome operators, NSGA-II
   encoding_search.py       the search
@@ -42,7 +42,7 @@ search_amplitude/        SEARCH 1: amplitude-encoder search
   train_on_encoded_states.py  trained classifiers on the encoded test states
   literature_ansatze.py    literature baselines (HEA chain, RealAmplitudes, ALT)
   run_amplitude_pipeline.sh   the whole amplitude chain for search_config.RUNS
-search_fourier/          SEARCH 2: Fourier-encoding search
+search_fourier/          SEARCH 4: Fourier-encoding search
   search_encoding.py       features -> NSGA-II search -> held-out picks
   train_downstream.py      picks + references: kernels, trained classifiers, classical baselines
   nsga2.py                 NSGA-II sorting and selection
@@ -54,8 +54,13 @@ studies/                 experiments built on both searches
   product_kernel_check.py  entanglement-free encodings have an exact classical kernel
 reporting/               reports, LaTeX tables and figures
   make_report.py           claims report with paired bootstrap tests (reports/report.md)
+  frobenius_summary.py     table and figure of the Frobenius search (reads frobenius_measure/)
   paper_tables.py          LaTeX tables (reports/paper/tables.tex)
   paper_figures.py         vector figures of the paper
+frobenius_measure/       SEARCH 1: Frobenius (reconstruction) search, one suite per dataset
+  <ds>_frobenius/          search, front sweep (linear probe), aggregation, QCNN stage;
+                           run_pipeline.sh runs it all (PyTorch, see its README)
+  <ds>_frobenius_results/  results of five search seeds per dataset
 tools/
   prepare_dataset.py       downloads a MedMNIST dataset into data/
   pennylane_encoding.py    rebuilds an exported encoding (and classifier) in PennyLane
@@ -97,16 +102,21 @@ noise study 1 h.
 
 | Stage | Script(s) | Paper |
 |---|---|---|
-| `data` | `tools/prepare_dataset.py` | Table I |
+| `data` | `tools/prepare_dataset.py` | Table II |
 | `diagnostics` | `diagnostics/diag_{a,b,c}_*.py` on blood-, breast-, derma-, retinamnist | Sec. V A, Fig. 2 |
-| `amplitude` | reference circuit, `encoding_search.py`, `select_encoder.py`, `diag_a_phase_check.py --genome-root`, `train_on_encoded_states.py` | Secs. IV B, V B–C |
-| `fourier` | `search_encoding.py`, `train_downstream.py` | Secs. IV C, V D, Fig. 4 |
-| `multiseed` | `studies/multiseed.py` | Table IV, Fig. 5 |
-| `objective` | `studies/objective_study.py` | Table II, Fig. 3 |
-| `noise` | `studies/noise_study.py` | Table V, Fig. 6 |
-| `kernel` | `studies/product_kernel_check.py` | Sec. III D |
-| `report` | `reporting/make_report.py` | Table III, claims |
+| `amplitude` | reference circuit, `encoding_search.py`, `select_encoder.py`, `diag_a_phase_check.py --genome-root`, `train_on_encoded_states.py` | Sec. IV C |
+| `fourier` | `search_encoding.py`, `train_downstream.py` | Secs. IV D, V E, Fig. 5 |
+| `multiseed` | `studies/multiseed.py` | Table VI, Fig. 6 |
+| `objective` | `studies/objective_study.py` (fidelity search + comparison) | Sec. V C, Table IV, Fig. 4 |
+| `noise` | `studies/noise_study.py` | Sec. V F, Table VII, Fig. 7 |
+| `kernel` | `studies/product_kernel_check.py` | Prop. 4, Sec. V E |
+| `report` | `reporting/make_report.py` | loss budget (Table V), claims |
+| `frobenius` | `reporting/frobenius_summary.py` (reads `frobenius_measure/*_results`) | Sec. V B, Table III, Fig. 3 |
 | `tables`, `figures` | `reporting/paper_tables.py`, `reporting/paper_figures.py` | all tables/figures |
+
+The Frobenius search itself (Sec. IV B, Appendix C) runs per dataset with
+`frobenius_measure/<ds>_frobenius/run_pipeline.sh` (PyTorch; search, front sweep,
+aggregation, QCNN stage); `run_all.py` only summarizes its results.
 
 Datasets: bloodmnist and pathmnist (centered preprocessing) run the full pipeline
 (`--main`); breastmnist (uncentered) additionally runs the amplitude search
@@ -148,7 +158,7 @@ See `search_amplitude/README.md` and `search_fourier/README.md` for the individu
   `core/aae_sim.py`. Its outputs are in `experiments_handref/` (earlier versions of the code
   used `experiments_default_genome_old/`; rename the folder to reuse old results). In
   classifier result files it appears as source `"default"`.
-* **Hard-coded figure values.** Figures 2 and 4 (`fig2_diagnostics.pdf`,
+* **Hard-coded figure values.** Figures 2 and 5 (`fig2_diagnostics.pdf`,
   `fig5_fourier.pdf`) use values copied from the bloodmnist reports (`SIGN`, `BUDGET`,
   `JOURNEY`, `FOURIER` at the top of `reporting/paper_figures.py`). Update them if you rerun.
 * **Determinism.** All randomness is seeded (`SEED`, `DATA_SEED` in the configs, `--seed`

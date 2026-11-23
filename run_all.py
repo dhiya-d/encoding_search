@@ -14,12 +14,15 @@
 #                test split, retention-driven search + held-out selection
 #                (seed 0), test-split encoding, trained classifiers
 #   fourier      Fourier (angle) encoding search + downstream evaluation (seed 0)
-#   multiseed    search seeds 1 and 2 for both searches (Table IV, Fig. 5)
+#   multiseed    search seeds 1 and 2 for both searches (Table VI, Fig. 6)
 #   objective    retention vs fidelity search vs literature vs random circuits
-#                (Table II, Fig. 3)
-#   noise        gate noise and finite measurement budgets (Table V, Fig. 6)
+#                (Table IV, Fig. 4)
+#   noise        gate noise and finite measurement budgets (Table VII, Fig. 7)
 #   kernel       exact classical kernel of entanglement-free encodings
 #   report       claims report over all runs (reporting/make_report.py)
+#   frobenius    summary table and figure of the Frobenius search
+#                (reporting/frobenius_summary.py; reads frobenius_measure/*_results,
+#                the search itself runs with frobenius_measure/<ds>_frobenius/run_pipeline.sh)
 #   tables       LaTeX tables (reporting/paper_tables.py)
 #   figures      paper figures (reporting/paper_figures.py)
 #
@@ -57,7 +60,7 @@ import sys
 import time
 
 STAGES = ["data", "diagnostics", "amplitude", "fourier", "multiseed", "objective",
-          "noise", "kernel", "report", "tables", "figures"]
+          "noise", "kernel", "report", "frobenius", "tables", "figures"]
 
 # the four small datasets used by the diagnostics (paper Fig. 2)
 SMALL = ["bloodmnist", "breastmnist", "dermamnist", "retinamnist"]
@@ -148,6 +151,10 @@ def build_commands(a):
 
     # reports, tables and figures
     add("report", [py, repo.script("make_report.py"), "--runs"] + [f"{d}:{m}" for d, m in amp_runs])
+    if os.path.isdir(os.path.join(repo.ROOT, "frobenius_measure")):
+        add("frobenius", [py, repo.script("frobenius_summary.py"),
+                          "--root", os.path.join(repo.ROOT, "frobenius_measure"),
+                          "--out-fig", "paper_figures"])
     add("tables", [py, repo.script("paper_tables.py"), "--pairs"] + [f"{d}:{m}:{d}" for d, m in main])
     for ds, _ in main:
         add("figures", [py, repo.script("paper_figures.py"), "--dataset", ds,

@@ -2,7 +2,7 @@
 # ----------------------------------------------------------------
 # paper_figures.py  —  vector figures for the paper (REVTeX column widths).
 #
-#   fig1_pipeline.pdf        schematic of the two encoding families
+#   fig1_pipeline.pdf        schematic of the two encoding families and four searches
 #   fig2_diagnostics.pdf     phase artefact + class-signal budget      (values below)
 #   fig3_objective.pdf       objective study                (reports/objective_<ds>.json)
 #   fig4_robustness.pdf      per-seed effects                (reports/multiseed_<ds>.json)
@@ -79,23 +79,27 @@ def arrow(ax, x0, y0, x1, y1):
 
 
 def fig1(out):
-    """fig1_pipeline.pdf (fig:pipeline): schematic of the two encoding families."""
-    fig, ax = plt.subplots(figsize=(WIDE, 1.9))
-    ax.set_xlim(0, 10); ax.set_ylim(0, 2.55); ax.axis("off")
-    rows = [(1.35, "amplitude", "16×16 grayscale\nimage (256 values)",
-             "approximate amplitude\nencoding: circuit fitted\nper image (fidelity)", C["ret"]),
-            (0.15, "Fourier", "low-frequency DCT\ncoefficients (RGB,\nd ≤ 32 angles)",
-             "angle encoding S(x):\none fixed circuit,\nspectrum from gates", C["four"])]
-    for y, lab, pre, enc, col in rows:
+    """fig1_pipeline.pdf (fig:pipeline): the two encoding families and the four searches."""
+    fig, ax = plt.subplots(figsize=(WIDE, 2.3))
+    ax.set_xlim(0, 10); ax.set_ylim(0, 3.05); ax.axis("off")
+    rows = [(1.6, "16×16 grayscale\nimage (256 values)",
+             "approximate amplitude\nencoding: circuit fitted\nper image", C["ret"],
+             "searches 1–3: Frobenius distance, fidelity, or retained class signal (retention)"),
+            (0.15, "low-frequency DCT\ncoefficients (RGB,\nd ≤ 32 angles)",
+             "angle encoding S(x):\none fixed circuit,\nspectrum from gates", C["four"],
+             "search 4: cross-validated kernel AUC")]
+    for y, pre, enc, col, obj in rows:
         box(ax, 0.0, y, 1.3, 0.8, "MedMNIST\nimage", "#8a8a8a")
         box(ax, 1.6, y, 1.9, 0.8, pre, "#5b7fa8")
         box(ax, 3.8, y, 2.2, 0.8, enc, col)
+        ax.text(1.6, y + 0.86, obj, ha="left", va="bottom", fontsize=6, style="italic")
         arrow(ax, 1.3, y + 0.4, 1.6, y + 0.4); arrow(ax, 3.5, y + 0.4, 3.8, y + 0.4)
-        arrow(ax, 6.0, y + 0.4, 6.35, 1.15)
-    box(ax, 6.35, 0.55, 1.75, 1.2, "measurement-based\nclassifier\n(kernel SVM, HEA,\nQCNN, re-uploading)", "#4a9a5b")
-    arrow(ax, 8.1, 1.15, 8.4, 1.15)
-    box(ax, 8.4, 0.75, 1.6, 0.8, "class\nprediction", "#8a8a8a")
-    ax.text(4.9, 2.38, "searched (NSGA-II, HierarQcal genomes)", ha="center", fontsize=6.5, style="italic")
+        arrow(ax, 6.0, y + 0.4, 6.3, 1.27)
+    box(ax, 6.3, 0.5, 2.0, 1.55, "linear probe, or\nclassifier: kernel\nSVM, HEA, QCNN,\nre-uploading", "#4a9a5b", fs=6.2)
+    arrow(ax, 8.3, 1.27, 8.55, 1.27)
+    box(ax, 8.55, 0.87, 1.45, 0.8, "class\nprediction", "#8a8a8a")
+    ax.text(4.9, 2.88, "circuit structure searched with NSGA-II against the two-qubit gate count",
+            ha="center", fontsize=6.5, weight="bold")
     fig.savefig(os.path.join(out, "fig1_pipeline.pdf")); plt.close(fig)
 
 

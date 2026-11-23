@@ -1,4 +1,4 @@
-# search_fourier/ — Search 2: Fourier (angle) encoding search
+# search_fourier/ — Search 4: Fourier (angle) encoding search
 
 Images are reduced to low-frequency 2-D DCT coefficients per colour channel, ranked by
 Fisher score on the training split and scaled to rotation angles. A genome is a list of
