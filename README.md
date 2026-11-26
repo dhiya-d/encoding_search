@@ -66,6 +66,7 @@ tools/
   pennylane_encoding.py    rebuilds an exported encoding (and classifier) in PennyLane
 tests/
   test_verification.py     simulators vs. PennyLane/Qiskit, gradients, noise, kernels
+results/                 the results reported in the paper (see results/README.md)
 data/                    datasets (not in the repository, see data/README.md)
 ```
 
@@ -148,6 +149,10 @@ See `search_amplitude/README.md` and `search_fourier/README.md` for the individu
 | `experiments_objective/`, `experiments_noise/` | per-circuit results of the studies |
 | `reports/` | Markdown/JSON reports of every study, `report.md`, `claims.json`, `paper/tables.tex` |
 | `paper_figures/<ds>/` | `fig1_pipeline.pdf` … `fig6_noise.pdf` |
+
+All of these folders are ignored by git. The results reported in the paper are kept in
+`results/`, which `results/README.md` maps to the tables and figures and to the paths
+above.
 
 ## Notes
 
