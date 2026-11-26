@@ -1,0 +1,61 @@
+python snippet.py
+bloodmnist centered
+  radius<=1:   9 coefs, energy kept 0.382, B kept 0.57, B share after renorm ~0.379
+  radius<=2:  21 coefs, energy kept 0.582, B kept 0.79, B share after renorm ~0.347
+  radius<=3:  37 coefs, energy kept 0.707, B kept 0.90, B share after renorm ~0.322
+  radius<=4:  69 coefs, energy kept 0.834, B kept 0.97, B share after renorm ~0.296
+bloodmnist uncentered
+  radius<=1:   9 coefs, energy kept 0.981, B kept 0.49, B share after renorm ~0.003
+  radius<=2:  21 coefs, energy kept 0.988, B kept 0.75, B share after renorm ~0.005
+  radius<=3:  37 coefs, energy kept 0.992, B kept 0.89, B share after renorm ~0.006
+  radius<=4:  69 coefs, energy kept 0.995, B kept 0.97, B share after renorm ~0.006
+bloodmnist whitened
+  radius<=1:   9 coefs, energy kept 0.371, B kept 0.61, B share after renorm ~0.282
+  radius<=2:  21 coefs, energy kept 0.568, B kept 0.83, B share after renorm ~0.252
+  radius<=3:  37 coefs, energy kept 0.691, B kept 0.92, B share after renorm ~0.229
+  radius<=4:  69 coefs, energy kept 0.820, B kept 0.98, B share after renorm ~0.206
+breastmnist centered
+  radius<=1:   9 coefs, energy kept 0.645, B kept 0.84, B share after renorm ~0.034
+  radius<=2:  21 coefs, energy kept 0.786, B kept 0.95, B share after renorm ~0.032
+  radius<=3:  37 coefs, energy kept 0.854, B kept 0.98, B share after renorm ~0.030
+  radius<=4:  69 coefs, energy kept 0.909, B kept 0.99, B share after renorm ~0.029
+breastmnist uncentered
+  radius<=1:   9 coefs, energy kept 0.895, B kept 0.82, B share after renorm ~0.004
+  radius<=2:  21 coefs, energy kept 0.934, B kept 0.95, B share after renorm ~0.004
+  radius<=3:  37 coefs, energy kept 0.953, B kept 0.98, B share after renorm ~0.004
+  radius<=4:  69 coefs, energy kept 0.969, B kept 0.99, B share after renorm ~0.004
+breastmnist whitened
+  radius<=1:   9 coefs, energy kept 0.635, B kept 0.80, B share after renorm ~0.032
+  radius<=2:  21 coefs, energy kept 0.778, B kept 0.94, B share after renorm ~0.030
+  radius<=3:  37 coefs, energy kept 0.848, B kept 0.98, B share after renorm ~0.029
+  radius<=4:  69 coefs, energy kept 0.904, B kept 0.99, B share after renorm ~0.028
+dermamnist centered
+  radius<=1:   9 coefs, energy kept 0.751, B kept 0.94, B share after renorm ~0.108
+  radius<=2:  21 coefs, energy kept 0.878, B kept 0.99, B share after renorm ~0.097
+  radius<=3:  37 coefs, energy kept 0.928, B kept 0.99, B share after renorm ~0.092
+  radius<=4:  69 coefs, energy kept 0.963, B kept 1.00, B share after renorm ~0.089
+dermamnist uncentered
+  radius<=1:   9 coefs, energy kept 0.992, B kept 0.93, B share after renorm ~0.001
+  radius<=2:  21 coefs, energy kept 0.997, B kept 0.98, B share after renorm ~0.001
+  radius<=3:  37 coefs, energy kept 0.998, B kept 0.99, B share after renorm ~0.001
+  radius<=4:  69 coefs, energy kept 0.999, B kept 1.00, B share after renorm ~0.001
+dermamnist whitened
+  radius<=1:   9 coefs, energy kept 0.757, B kept 0.95, B share after renorm ~0.090
+  radius<=2:  21 coefs, energy kept 0.877, B kept 0.98, B share after renorm ~0.081
+  radius<=3:  37 coefs, energy kept 0.926, B kept 0.99, B share after renorm ~0.078
+  radius<=4:  69 coefs, energy kept 0.960, B kept 1.00, B share after renorm ~0.075
+retinamnist centered
+  radius<=1:   9 coefs, energy kept 0.752, B kept 0.91, B share after renorm ~0.086
+  radius<=2:  21 coefs, energy kept 0.858, B kept 0.94, B share after renorm ~0.078
+  radius<=3:  37 coefs, energy kept 0.906, B kept 0.96, B share after renorm ~0.075
+  radius<=4:  69 coefs, energy kept 0.947, B kept 0.97, B share after renorm ~0.073
+retinamnist uncentered
+  radius<=1:   9 coefs, energy kept 0.918, B kept 0.62, B share after renorm ~0.001
+  radius<=2:  21 coefs, energy kept 0.949, B kept 0.76, B share after renorm ~0.001
+  radius<=3:  37 coefs, energy kept 0.974, B kept 0.82, B share after renorm ~0.002
+  radius<=4:  69 coefs, energy kept 0.986, B kept 0.89, B share after renorm ~0.002
+retinamnist whitened
+  radius<=1:   9 coefs, energy kept 0.767, B kept 0.91, B share after renorm ~0.089
+  radius<=2:  21 coefs, energy kept 0.864, B kept 0.93, B share after renorm ~0.081
+  radius<=3:  37 coefs, energy kept 0.909, B kept 0.95, B share after renorm ~0.078
+  radius<=4:  69 coefs, energy kept 0.949, B kept 0.97, B share after renorm ~0.077

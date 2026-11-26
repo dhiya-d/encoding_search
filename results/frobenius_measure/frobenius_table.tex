@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\caption{Frobenius (reconstruction) search, five search seeds per dataset. Probe: balanced accuracy of a class-balanced logistic regression on the encoded test states (raw: on the exact targets). $g^\ast$: smallest two-qubit gate count from which the mean probe of all costlier front circuits is within 0.03 of the raw-target probe (mean $\pm$ s.d. over seeds that reach it). Cheap: front circuits with 1--5 gates; expensive: $\ge26$ gates, pooled over seeds. Knee: circuit selected by the search (cheapest within 0.015 of the best Frobenius distance). $B$: between-class signal of the exact test targets (Proposition~\ref{prop:budget}); not computed where the data are not in the repository.}
+\label{tab:frobenius}
+\begin{ruledtabular}
+\begin{tabular}{lccccccccc}
+Dataset & $K$ & $B$ & Probe, raw & $g^\ast$ & Probe, cheap & Probe, expensive & $\lVert\chi\rVert_F$, cheap & $\lVert\chi\rVert_F$, expensive & Knee gates\\
+\hline
+BloodMNIST & 8 & -- & 0.616 & 5.4 $\pm$ 1.5 & 0.501 $\pm$ 0.037 & 0.607 $\pm$ 0.007 & 0.88 $\pm$ 0.05 & 0.44 $\pm$ 0.05 & 31--83\\
+BreastMNIST & 2 & 0.027 & 0.702 & 1.2 $\pm$ 0.4 & 0.660 $\pm$ 0.024 & 0.691 $\pm$ 0.010 & 0.64 $\pm$ 0.04 & 0.31 $\pm$ 0.05 & 24--73\\
+DermaMNIST & 7 & 0.044 & 0.325 & 6.8 $\pm$ 4.8 ($n=4$) & 0.255 $\pm$ 0.019 & 0.315 $\pm$ 0.012 & 0.64 $\pm$ 0.05 & 0.30 $\pm$ 0.04 & 18--43\\
+RetinaMNIST (retina4) & 4 & 0.070 & 0.456 & 7.4 $\pm$ 3.8 & 0.390 $\pm$ 0.017 & 0.438 $\pm$ 0.012 & 0.63 $\pm$ 0.05 & 0.29 $\pm$ 0.03 & 26--55\\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}

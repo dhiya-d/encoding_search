@@ -1,0 +1,12 @@
+PASS  test_qsim_matches_pennylane
+PASS  test_aae_matches_pennylane
+PASS  test_aae_fidelity_gradient
+PASS  test_classifier_gradient
+PASS  test_trajectory_averaged_gradient
+PASS  test_noise_trajectories_match_channel
+PASS  test_mixed_kernel_is_trace_overlap
+PASS  test_swap_test_unbiased
+PASS  test_product_kernel_exact
+PASS  test_realamplitudes_matches_qiskit
+
+10/10 passed or skipped

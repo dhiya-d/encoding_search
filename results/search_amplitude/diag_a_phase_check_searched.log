@@ -1,0 +1,56 @@
+mv experiments_searched experiments_default_genome_old
+python diag_a_phase_check.py --genome-root experiments --out experiments_searched --datasets bloodmnist --modes centered
+python diag_a_phase_check.py --genome-root experiments --out experiments_searched --datasets breastmnist --modes uncentered
+cat experiments_searched/summary_a_phase_check.csv
+genome root: /home/dhiyadharampal/fourier/experiments  (2 genomes: ['bloodmnist/search/centered/selected_genome.json', 'breastmnist/search/uncentered/selected_genome.json'])
+datasets: ['bloodmnist'] | modes: ['centered']
+
+[bloodmnist/centered] genome from /home/dhiyadharampal/fourier/experiments/bloodmnist/search/centered/selected_genome.json: 40 params, 19 two-qubit gates, complex=False
+  encoding 2000 train + 800 test images (250 steps x 2 restarts)...
+      restart 1/2  images 1024/2800  mean fid so far 0.6521
+      restart 1/2  images 2048/2800  mean fid so far 0.6509
+      restart 1/2  images 2800/2800  mean fid so far 0.6515
+      restart 2/2  images 1024/2800  mean fid so far 0.6677
+      restart 2/2  images 2048/2800  mean fid so far 0.6655
+      restart 2/2  images 2800/2800  mean fid so far 0.6655
+  running readouts...
+  mean fidelity 0.6655 | phase R 0.016 | flipped 0.51
+  target_linear              bal_acc 0.603  auc 0.900
+  encoded_linear_asis        bal_acc 0.145  auc 0.504
+  encoded_linear_aligned     bal_acc 0.556  auc 0.872
+  control_target_randphase   bal_acc 0.152  auc 0.526
+  encoded_fidkernel_svm      bal_acc 0.659  auc 0.904
+  target_fidkernel_svm       bal_acc 0.718  auc 0.927
+  > PHASE ARTEFACT LIKELY: phases scattered (R=0.02) and aligning them raises probe bal_acc by +0.411.
+  > Control confirms it: exact targets with the same shuffled phases drop from 0.603 to 0.152.
+  > Phase-invariant readout: encoded 0.659 vs exact-target 0.718 bal_acc (AUC 0.904 vs 0.927); physical encoding loss = +0.059 bal_acc.
+  > Heuristic thresholds (0.9, 0.05) — read the numbers, not just this text.
+  saved to experiments_searched/bloodmnist/a_phase_check/centered  (217.7 s)
+
+summaries: experiments_searched/<dataset>/summary_a_phase_check.csv and experiments_searched/summary_a_phase_check.csv
+genome root: /home/dhiyadharampal/fourier/experiments  (2 genomes: ['bloodmnist/search/centered/selected_genome.json', 'breastmnist/search/uncentered/selected_genome.json'])
+datasets: ['breastmnist'] | modes: ['uncentered']
+
+[breastmnist/uncentered] genome from /home/dhiyadharampal/fourier/experiments/breastmnist/search/uncentered/selected_genome.json: 40 params, 19 two-qubit gates, complex=False
+  encoding 546 train + 156 test images (250 steps x 2 restarts)...
+      restart 1/2  images 702/702  mean fid so far 0.9518
+      restart 2/2  images 702/702  mean fid so far 0.9526
+  running readouts...
+  mean fidelity 0.9526 | phase R 0.054 | flipped 0.47
+  target_linear              bal_acc 0.725  auc 0.797
+  encoded_linear_asis        bal_acc 0.469  auc 0.485
+  encoded_linear_aligned     bal_acc 0.740  auc 0.812
+  control_target_randphase   bal_acc 0.497  auc 0.519
+  encoded_fidkernel_svm      bal_acc 0.742  auc 0.806
+  target_fidkernel_svm       bal_acc 0.741  auc 0.808
+  > PHASE ARTEFACT LIKELY: phases scattered (R=0.05) and aligning them raises probe bal_acc by +0.271.
+  > Control confirms it: exact targets with the same shuffled phases drop from 0.725 to 0.497.
+  > Phase-invariant readout: encoded 0.742 vs exact-target 0.741 bal_acc (AUC 0.806 vs 0.808); physical encoding loss = -0.001 bal_acc.
+  > Heuristic thresholds (0.9, 0.05) — read the numbers, not just this text.
+  saved to experiments_searched/breastmnist/a_phase_check/uncentered  (45.3 s)
+
+summaries: experiments_searched/<dataset>/summary_a_phase_check.csv and experiments_searched/summary_a_phase_check.csv
+dataset,mode,genome_source,two_qubit_gates,fid_mean,phase_R,frac_flipped,chance,target_linear_balacc,target_linear_auc,encoded_linear_asis_balacc,encoded_linear_asis_auc,encoded_linear_aligned_balacc,encoded_linear_aligned_auc,control_target_randphase_balacc,control_target_randphase_auc,encoded_fidkernel_svm_balacc,encoded_fidkernel_svm_auc,target_fidkernel_svm_balacc,target_fidkernel_svm_auc
+bloodmnist,centered,selected_genome.json,19,0.6655487346048525,0.016428571428571428,0.5082142857142857,0.125,0.6025,0.8998196428571428,0.14500000000000002,0.5038232142857143,0.55625,0.8722428571428571,0.1525,0.5262517857142857,0.65875,0.9040303571428572,0.7175,0.9267464285714286
+breastmnist,uncentered,selected_genome.json,19,0.9525526114335398,0.05413105413105413,0.47293447293447294,0.5,0.724937343358396,0.7972013366750208,0.468671679197995,0.48517126148705103,0.7399749373433584,0.8122389306599833,0.4968671679197995,0.5194235588972431,0.7424812030075187,0.8061821219715956,0.7412280701754386,0.8082706766917294
+(ga_env) dhiyadharampal@qsun1-MS-7D91:~/fourier$ 

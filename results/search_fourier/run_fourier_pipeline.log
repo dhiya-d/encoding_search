@@ -1,0 +1,71 @@
+======================================================================
+[bloodmnist] features...
+  RGB dct features, top Fisher: R_dct_0_0, G_dct_0_0, G_dct_0_2, G_dct_2_4, R_dct_0_2
+  resuming at generation 31 (1240 genomes cached)
+  search batch 600 images {0: 75, 1: 75, 2: 75, 3: 75, 4: 75, 5: 75, 6: 75, 7: 75}, 8 workers, fitness kernel: fidelity
+  selection: re-scoring 5 front genomes + 6 references on 800 held-out images...
+  best reference: ref_two_layer_d16 AUC 0.930 (cost 16)
+  pick search_best                  AUC 0.937 (cost 16) d=32: RY(1x[0+q]) > CNOT(s1/t1/o0) > RY(0.5x[9+q]) > ZZ(0.5,s1/t2/o0) > RX(0.5x[0+q]) > H
+  pick search_knee_efficient        AUC 0.937 (cost  0) d=32: RY(0.5x[9+q]) > RX(0.5x[0+q]) > RX(0.5x[0+q]) > RY(0.5x[0+q])
+  done in 3s -> experiments_fourier/bloodmnist/search
+
+======================================================================
+[breastmnist] features...
+  grayscale dct features, top Fisher: gray_dct_2_2, gray_dct_0_2, gray_dct_2_0, gray_dct_1_4, gray_dct_1_0
+  resuming at generation 31 (1240 genomes cached)
+  search batch 546 images {0: 147, 1: 399}, 8 workers, fitness kernel: fidelity
+  selection: re-scoring 3 front genomes + 6 references on 78 held-out images...
+  best reference: ref_two_layer_d16 AUC 0.862 (cost 16)
+  pick search_best_knee             AUC 0.855 (cost  0) d=24: RZ(2x[18+q]) > RY(1x[0+q]) > RX(1x[3+q]) > RX(0.5x[2+q]) > RY(0.5x[5+q]) > RX(2x[0+q])
+  done in 1s -> experiments_fourier/breastmnist/search
+
+======================================================================
+[dermamnist] features...
+  RGB dct features, top Fisher: R_dct_0_0, R_dct_2_2, B_dct_2_0, R_dct_0_2, B_dct_0_0
+  resuming at generation 31 (1240 genomes cached)
+  search batch 600 images {0: 85, 1: 85, 2: 86, 3: 80, 4: 87, 5: 92, 6: 85}, 8 workers, fitness kernel: fidelity
+  selection: re-scoring 5 front genomes + 6 references on 800 held-out images...
+  best reference: ref_two_layer_d16 AUC 0.776 (cost 16)
+  pick search_best                  AUC 0.784 (cost 16) d=24: RX(0.5x[0+q]) > RZ(0.5x[10+q]) > RY(0.5x[7+q]) > CNOT(s2/t1/o0) > CNOT(s2/t2/o1) > H > H > CNOT(s2/t2/o0) > RX(0.5x[0+q]) > RY(0.5x[9+q])
+  pick search_knee_efficient        AUC 0.783 (cost  7) d=16: RY(0.5x[9+q]) > RY(0.5x[0+q]) > H > CZ(s3/t1/o1) > H > H > RX(0.5x[0+q]) > RY(0.5x[9+q])
+  done in 2s -> experiments_fourier/dermamnist/search
+
+======================================================================
+[retinamnist] features...
+  RGB dct features, top Fisher: R_dct_0_0, B_dct_2_0, B_dct_0_2, R_dct_2_0, B_dct_0_0
+  resuming at generation 31 (1240 genomes cached)
+  search batch 600 images {0: 163, 1: 121, 2: 127, 3: 123, 4: 66}, 8 workers, fitness kernel: fidelity
+  selection: re-scoring 3 front genomes + 6 references on 600 held-out images...
+  best reference: ref_parallel_d4 AUC 0.716 (cost 8)
+  pick search_best_knee             AUC 0.671 (cost  0) d=32: RX(0.5x[27+q]) > RZ(0.5x[23+q]) > RY(0.5x[15+q]) > RX(1x[27+q]) > RY(1x[23+q]) > RX(1x[2+q]) > RY(1x[19+q]) > RY(1x[19+q]) > H
+  done in 1s -> experiments_fourier/retinamnist/search
+
+======================================================================
+[bloodmnist] downstream evaluation
+  8 classes | kernel train 2000, classifier fit 2000, val 500, test 3421 | seeds [0, 1]
+  classical on all 32 features (bal_acc/AUC): logreg 0.797/0.969, RBF SVM 0.813/0.957
+  8 encodings to (re)train on 8 worker(s): 0 in full, 8 only for missing classifiers (hea8, qcnn, reupload)
+    finished search_best (699s)
+    finished search_knee_efficient (562s)
+    finished ref_angle_RY_d8 (432s)
+    finished ref_angle_RY_ring_d8 (442s)
+    finished ref_reupload3_d8 (594s)
+    finished ref_parallel_d4 (335s)
+    finished ref_two_layer_d16 (516s)
+    finished ref_iqp_zz_d8 (809s)
+  search_best                cost 16 d=32 | qk_fidelity 0.788 | qk_projected 0.742 | reupload 0.687 | qcnn 0.648 | hea8 0.710 | cl_rbf 0.813 | cl_fourier 0.766
+  search_knee_efficient      cost  0 d=32 | qk_fidelity 0.787 | qk_projected 0.781 | reupload 0.649 | qcnn 0.601 | hea8 0.709 | cl_rbf 0.813 | cl_fourier 0.766
+  ref_angle_RY_d8            cost  0 d= 8 | qk_fidelity 0.737 | qk_projected 0.730 | reupload 0.632 | qcnn 0.636 | hea8 0.658 | cl_rbf 0.730 | cl_fourier 0.724
+  ref_angle_RY_ring_d8       cost  8 d= 8 | qk_fidelity 0.736 | qk_projected 0.643 | reupload 0.630 | qcnn 0.618 | hea8 0.665 | cl_rbf 0.730 | cl_fourier 0.724
+  ref_reupload3_d8           cost 16 d= 8 | qk_fidelity 0.726 | qk_projected 0.662 | reupload 0.608 | qcnn 0.615 | hea8 0.667 | cl_rbf 0.730 | cl_fourier 0.636
+  ref_parallel_d4            cost  8 d= 4 | qk_fidelity 0.630 | qk_projected 0.558 | reupload 0.581 | qcnn 0.552 | hea8 0.589 | cl_rbf 0.628 | cl_fourier 0.616
+  ref_two_layer_d16          cost 16 d=16 | qk_fidelity 0.778 | qk_projected 0.643 | reupload 0.635 | qcnn 0.640 | hea8 0.694 | cl_rbf 0.785 | cl_fourier 0.746
+  ref_iqp_zz_d8              cost 32 d= 8 | qk_fidelity 0.712 | qk_projected 0.712 | reupload 0.609 | qcnn 0.563 | hea8 0.647 | cl_rbf 0.730 | cl_fourier 0.679
+  done in 494s -> experiments_fourier/bloodmnist/downstream
+
+======================================================================
+[breastmnist] downstream evaluation
+  2 classes | kernel train 546, classifier fit 546, val 78, test 156 | seeds [0, 1]
+  classical on all 32 features (bal_acc/AUC): logreg 0.666/0.768, RBF SVM 0.734/0.824
+  7 encodings to (re)train on 7 worker(s): 0 in full, 7 only for missing classifiers (hea8, qcnn, reupload)
+[log pasted into the chat up to here; the remaining datasets are in results/report.md]

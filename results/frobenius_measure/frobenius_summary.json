@@ -1,0 +1,949 @@
+{
+  "bloodmnist": {
+    "classes": 8,
+    "chance": 0.125,
+    "merge": "none",
+    "probe_raw": 0.6160455857639343,
+    "n_seeds": 5,
+    "front_sizes": [
+      24,
+      24,
+      21,
+      24,
+      20
+    ],
+    "saturation_per_seed": [
+      7,
+      4,
+      5,
+      4,
+      7
+    ],
+    "saturation": [
+      5.4,
+      1.51657508881031
+    ],
+    "n_saturated": 5,
+    "probe_cheap": [
+      0.5010570886289565,
+      0.03666233220505465
+    ],
+    "n_cheap": 22,
+    "probe_expensive": [
+      0.6065630461892717,
+      0.007147463230552132
+    ],
+    "n_expensive": 37,
+    "frob_cheap": [
+      0.8826296681707556,
+      0.04790436876852666
+    ],
+    "frob_expensive": [
+      0.4426997843626383,
+      0.05197605037653047
+    ],
+    "knee_gates": [
+      45,
+      83,
+      45,
+      45,
+      31
+    ],
+    "hours": [
+      0.8782944444444445,
+      0.19461235666648705
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "front": 24,
+        "gates_max": 45,
+        "knee_gates": 45,
+        "knee_frob": 0.444724977016449,
+        "saturation": 7,
+        "seconds": 3129.5,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 0,
+          "device": "auto",
+          "outdir": "experiments/blo_seed0"
+        },
+        "data": {
+          "data_dir": "bloodmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 1,
+        "front": 24,
+        "gates_max": 96,
+        "knee_gates": 83,
+        "knee_frob": 0.36171168088912964,
+        "saturation": 4,
+        "seconds": 4292.6,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 1,
+          "device": "auto",
+          "outdir": "experiments/blo_seed1"
+        },
+        "data": {
+          "data_dir": "bloodmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 2,
+        "front": 21,
+        "gates_max": 45,
+        "knee_gates": 45,
+        "knee_frob": 0.4115314781665802,
+        "saturation": 5,
+        "seconds": 2893.1,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 2,
+          "device": "auto",
+          "outdir": "experiments/blo_seed2"
+        },
+        "data": {
+          "data_dir": "bloodmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 3,
+        "front": 24,
+        "gates_max": 46,
+        "knee_gates": 45,
+        "knee_frob": 0.41615748405456543,
+        "saturation": 4,
+        "seconds": 3112.7,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 3,
+          "device": "auto",
+          "outdir": "experiments/blo_seed3"
+        },
+        "data": {
+          "data_dir": "bloodmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 4,
+        "front": 20,
+        "gates_max": 31,
+        "knee_gates": 31,
+        "knee_frob": 0.4732118844985962,
+        "saturation": 7,
+        "seconds": 2381.4,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 4,
+          "device": "auto",
+          "outdir": "experiments/blo_seed4"
+        },
+        "data": {
+          "data_dir": "bloodmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      }
+    ],
+    "B_test": null
+  },
+  "breastmnist": {
+    "classes": 2,
+    "chance": 0.5,
+    "merge": "none",
+    "probe_raw": 0.7017857142857142,
+    "n_seeds": 5,
+    "front_sizes": [
+      22,
+      21,
+      18,
+      14,
+      20
+    ],
+    "saturation_per_seed": [
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "saturation": [
+      1.2,
+      0.4472135954999579
+    ],
+    "n_saturated": 5,
+    "probe_cheap": [
+      0.6601428571428571,
+      0.024346911690059123
+    ],
+    "n_cheap": 25,
+    "probe_expensive": [
+      0.6907312925170068,
+      0.010142779294517745
+    ],
+    "n_expensive": 21,
+    "frob_cheap": [
+      0.637594633102417,
+      0.03670300273045252
+    ],
+    "frob_expensive": [
+      0.30605144514924004,
+      0.05326966337813731
+    ],
+    "knee_gates": [
+      73,
+      51,
+      24,
+      25,
+      39
+    ],
+    "hours": [
+      0.8560000000000001,
+      0.13978380711470653
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "front": 22,
+        "gates_max": 73,
+        "knee_gates": 73,
+        "knee_frob": 0.20843255519866943,
+        "saturation": 1,
+        "seconds": 3772.8,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 0,
+          "device": "auto",
+          "outdir": "experiments/b_seed0"
+        },
+        "data": {
+          "data_dir": "breastmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 1,
+        "front": 21,
+        "gates_max": 51,
+        "knee_gates": 51,
+        "knee_frob": 0.27861225605010986,
+        "saturation": 2,
+        "seconds": 3078.8,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 1,
+          "device": "auto",
+          "outdir": "experiments/b_seed1"
+        },
+        "data": {
+          "data_dir": "breastmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 2,
+        "front": 18,
+        "gates_max": 33,
+        "knee_gates": 24,
+        "knee_frob": 0.38924458622932434,
+        "saturation": 1,
+        "seconds": 2700.5,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 2,
+          "device": "auto",
+          "outdir": "experiments/b_seed2"
+        },
+        "data": {
+          "data_dir": "breastmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 3,
+        "front": 14,
+        "gates_max": 25,
+        "knee_gates": 25,
+        "knee_frob": 0.3878413140773773,
+        "saturation": 1,
+        "seconds": 2514.0,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 3,
+          "device": "auto",
+          "outdir": "experiments/b_seed3"
+        },
+        "data": {
+          "data_dir": "breastmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 4,
+        "front": 20,
+        "gates_max": 39,
+        "knee_gates": 39,
+        "knee_frob": 0.3334692418575287,
+        "saturation": 1,
+        "seconds": 3341.9,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 4,
+          "device": "auto",
+          "outdir": "experiments/b_seed4"
+        },
+        "data": {
+          "data_dir": "breastmnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      }
+    ],
+    "B_test": 0.02725127671435134,
+    "qcnn": {
+      "val_bal_acc": 0.7354651162790697,
+      "n_finalists": 6,
+      "winner": "5L [8\u21928\u21924\u21922\u21921\u21921] U_15+U_15+U_13+U_13+U_gate | 68 params | 36 2q"
+    }
+  },
+  "dermamnist": {
+    "classes": 7,
+    "chance": 0.143,
+    "merge": "none",
+    "probe_raw": 0.32501210084243004,
+    "n_seeds": 5,
+    "front_sizes": [
+      19,
+      19,
+      12,
+      20,
+      20
+    ],
+    "saturation_per_seed": [
+      13,
+      8,
+      null,
+      3,
+      3
+    ],
+    "saturation": [
+      6.75,
+      4.7871355387816905
+    ],
+    "n_saturated": 4,
+    "probe_cheap": [
+      0.25492195894758096,
+      0.01874034632464788
+    ],
+    "n_cheap": 23,
+    "probe_expensive": [
+      0.3146389900316708,
+      0.012107456697750105
+    ],
+    "n_expensive": 15,
+    "frob_cheap": [
+      0.644141339737436,
+      0.051788224483781696
+    ],
+    "frob_expensive": [
+      0.2990344683329264,
+      0.04337360344887518
+    ],
+    "knee_gates": [
+      36,
+      34,
+      18,
+      30,
+      43
+    ],
+    "hours": [
+      0.8045277777777777,
+      0.1498794744696016
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "front": 19,
+        "gates_max": 36,
+        "knee_gates": 36,
+        "knee_frob": 0.3353763222694397,
+        "saturation": 13,
+        "seconds": 2687.5,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 0,
+          "device": "auto",
+          "outdir": "experiments/der_seed0"
+        },
+        "data": {
+          "data_dir": "dermamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 1,
+        "front": 19,
+        "gates_max": 42,
+        "knee_gates": 34,
+        "knee_frob": 0.3314094543457031,
+        "saturation": 8,
+        "seconds": 2181.2,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 1,
+          "device": "auto",
+          "outdir": "experiments/der_seed1"
+        },
+        "data": {
+          "data_dir": "dermamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 2,
+        "front": 12,
+        "gates_max": 18,
+        "knee_gates": 18,
+        "knee_frob": 0.4615551829338074,
+        "saturation": null,
+        "seconds": 2751.0,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 2,
+          "device": "auto",
+          "outdir": "experiments/der_seed2"
+        },
+        "data": {
+          "data_dir": "dermamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 3,
+        "front": 20,
+        "gates_max": 30,
+        "knee_gates": 30,
+        "knee_frob": 0.28793075680732727,
+        "saturation": 3,
+        "seconds": 3339.1,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 3,
+          "device": "auto",
+          "outdir": "experiments/der_seed3"
+        },
+        "data": {
+          "data_dir": "dermamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      },
+      {
+        "seed": 4,
+        "front": 20,
+        "gates_max": 51,
+        "knee_gates": 43,
+        "knee_frob": 0.25972700119018555,
+        "saturation": 3,
+        "seconds": 3522.7,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 4,
+          "device": "auto",
+          "outdir": "experiments/der_seed4"
+        },
+        "data": {
+          "data_dir": "dermamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "none"
+        }
+      }
+    ],
+    "B_test": 0.04427403002446399,
+    "qcnn": {
+      "val_bal_acc": 0.30250457077154963,
+      "n_finalists": 6,
+      "winner": "1L [8\u21924] U_9 | 16 params | 12 2q"
+    }
+  },
+  "retinamnist": {
+    "classes": 4,
+    "chance": 0.25,
+    "merge": "retina4",
+    "probe_raw": 0.45573804007087365,
+    "n_seeds": 5,
+    "front_sizes": [
+      24,
+      21,
+      13,
+      21,
+      21
+    ],
+    "saturation_per_seed": [
+      8,
+      1,
+      11,
+      8,
+      9
+    ],
+    "saturation": [
+      7.4,
+      3.7815340802378072
+    ],
+    "n_saturated": 5,
+    "probe_cheap": [
+      0.3902147863815128,
+      0.01702067914339596
+    ],
+    "n_cheap": 23,
+    "probe_expensive": [
+      0.4377477454454591,
+      0.01187317760506736
+    ],
+    "n_expensive": 22,
+    "frob_cheap": [
+      0.6273410994073619,
+      0.05098781446696402
+    ],
+    "frob_expensive": [
+      0.2943004843863574,
+      0.03452255474546072
+    ],
+    "knee_gates": [
+      54,
+      55,
+      34,
+      54,
+      26
+    ],
+    "hours": [
+      0.7677611111111111,
+      0.1556806733923682
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "front": 24,
+        "gates_max": 54,
+        "knee_gates": 54,
+        "knee_frob": 0.2639821171760559,
+        "saturation": 8,
+        "seconds": 2848.4,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 0,
+          "device": "auto",
+          "outdir": "experiments/r_seed0"
+        },
+        "data": {
+          "data_dir": "retinamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "retina4"
+        }
+      },
+      {
+        "seed": 1,
+        "front": 21,
+        "gates_max": 55,
+        "knee_gates": 55,
+        "knee_frob": 0.274863600730896,
+        "saturation": 1,
+        "seconds": 2391.4,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 1,
+          "device": "auto",
+          "outdir": "experiments/r_seed1"
+        },
+        "data": {
+          "data_dir": "retinamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "retina4"
+        }
+      },
+      {
+        "seed": 2,
+        "front": 13,
+        "gates_max": 34,
+        "knee_gates": 34,
+        "knee_frob": 0.34387320280075073,
+        "saturation": 11,
+        "seconds": 2105.6,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 2,
+          "device": "auto",
+          "outdir": "experiments/r_seed2"
+        },
+        "data": {
+          "data_dir": "retinamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "retina4"
+        }
+      },
+      {
+        "seed": 3,
+        "front": 21,
+        "gates_max": 54,
+        "knee_gates": 54,
+        "knee_frob": 0.25159621238708496,
+        "saturation": 8,
+        "seconds": 2898.6,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 3,
+          "device": "auto",
+          "outdir": "experiments/r_seed3"
+        },
+        "data": {
+          "data_dir": "retinamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "retina4"
+        }
+      },
+      {
+        "seed": 4,
+        "front": 21,
+        "gates_max": 29,
+        "knee_gates": 26,
+        "knee_frob": 0.3528284430503845,
+        "saturation": 9,
+        "seconds": 3575.7,
+        "settings": {
+          "pareto_front": true,
+          "gate_penalty": 0.004,
+          "knee_tolerance": 0.015,
+          "pop": 24,
+          "gen": 12,
+          "p_crossover": 0.7,
+          "min_gates": 1,
+          "max_layers": 10,
+          "elite": 2,
+          "fit_steps": 150,
+          "fit_lr": 0.08,
+          "batch_train": 256,
+          "batch_final": 512,
+          "restarts": 1,
+          "seed": 4,
+          "device": "auto",
+          "outdir": "experiments/r_seed4"
+        },
+        "data": {
+          "data_dir": "retinamnist",
+          "channel": "gray",
+          "size": 16,
+          "center": true,
+          "merge": "retina4"
+        }
+      }
+    ],
+    "B_test": 0.07036046584533005,
+    "qcnn": {
+      "val_bal_acc": 0.4013278388278388,
+      "n_finalists": 6,
+      "winner": "4L [8\u21924\u21924\u21922\u21922] U_14+U_9+U_SO4+U_TTN | 78 params | 27 2q"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+(ga_env) dhiyadharampal@qsun1-MS-7D91:~/fourier$ bash run_fourier_pipeline.sh
+
+[bloodmnist/centered] 8 classes | fit 1600, val 400, test 800 | sources ['exact', 'searched', 'default'] | seeds [0, 1]
+  exact    hea        test bal_acc 0.601 ± 0.017, AUC 0.898 ± 0.008  (37s)
+  exact    hea8       test bal_acc 0.633 ± 0.008, AUC 0.910 ± 0.002  (47s)
+  exact    hea12      test bal_acc 0.543 ± 0.028, AUC 0.880 ± 0.011  (61s)
+  exact    hea8_probs test bal_acc 0.637 ± 0.013, AUC 0.916 ± 0.005  (44s)
+  exact    qcnn       test bal_acc 0.572 ± 0.009, AUC 0.886 ± 0.006  (45s)
+  searched hea        test bal_acc 0.552 ± 0.012, AUC 0.866 ± 0.007  (39s)
+  searched hea8       test bal_acc 0.574 ± 0.022, AUC 0.889 ± 0.007  (47s)
+  searched hea12      test bal_acc 0.557 ± 0.016, AUC 0.881 ± 0.003  (96s)
+  searched hea8_probs test bal_acc 0.573 ± 0.001, AUC 0.890 ± 0.004  (32s)
+  searched qcnn       test bal_acc 0.496 ± 0.045, AUC 0.850 ± 0.025  (27s)
+  default  hea        test bal_acc 0.474 ± 0.006, AUC 0.838 ± 0.006  (28s)
+  default  hea8       test bal_acc 0.520 ± 0.020, AUC 0.849 ± 0.004  (55s)
+  default  hea12      test bal_acc 0.473 ± 0.008, AUC 0.833 ± 0.004  (64s)
+  default  hea8_probs test bal_acc 0.457 ± 0.008, AUC 0.833 ± 0.001  (33s)
+  default  qcnn       test bal_acc 0.447 ± 0.017, AUC 0.817 ± 0.004  (37s)
+
+[breastmnist/uncentered] 2 classes | fit 436, val 110, test 156 | sources ['exact', 'searched', 'default'] | seeds [0, 1]
+  exact    hea        test bal_acc 0.672 ± 0.014, AUC 0.738 ± 0.010  (3s)
+  exact    hea8       test bal_acc 0.694 ± 0.024, AUC 0.743 ± 0.026  (8s)
+  exact    hea12      test bal_acc 0.713 ± 0.006, AUC 0.779 ± 0.018  (21s)
+  exact    hea8_probs test bal_acc 0.720 ± 0.011, AUC 0.805 ± 0.003  (21s)
+  exact    qcnn       test bal_acc 0.672 ± 0.030, AUC 0.704 ± 0.003  (5s)
+  searched hea        test bal_acc 0.666 ± 0.022, AUC 0.732 ± 0.024  (5s)
+  searched hea8       test bal_acc 0.680 ± 0.017, AUC 0.726 ± 0.015  (6s)
+  searched hea12      test bal_acc 0.701 ± 0.003, AUC 0.771 ± 0.018  (15s)
+  searched hea8_probs test bal_acc 0.721 ± 0.037, AUC 0.787 ± 0.010  (22s)
+  searched qcnn       test bal_acc 0.685 ± 0.004, AUC 0.717 ± 0.013  (5s)
+  default  hea        test bal_acc 0.683 ± 0.007, AUC 0.713 ± 0.003  (7s)
+  default  hea8       test bal_acc 0.695 ± 0.002, AUC 0.724 ± 0.014  (12s)
+  default  hea12      test bal_acc 0.685 ± 0.013, AUC 0.733 ± 0.031  (17s)
+  default  hea8_probs test bal_acc 0.717 ± 0.022, AUC 0.774 ± 0.002  (18s)
+  default  qcnn       test bal_acc 0.676 ± 0.004, AUC 0.689 ± 0.007  (8s)
+
+summary: experiments_searched/summary_downstream_classifiers.csv
