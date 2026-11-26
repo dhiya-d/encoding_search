@@ -1,0 +1,18 @@
+# Datasets and generated results. run_all.py reproduces everything here.
+data/*
+!data/README.md
+experiments*/
+quick_run/
+reports/
+paper_figures/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
